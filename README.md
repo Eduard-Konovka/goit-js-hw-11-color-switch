@@ -1,27 +1,25 @@
-# Сборка Webpack 5.5
+# Переключатель цветов
 
-Простенькая сборка Webpack 5.5 по видео Саши Репеты для нашего уровня студентов, но РАБОЧАЯ!
+Есть массив цветов в hex-формате и кнопки `Start` и `Stop`.
 
-## Для установки сборки:
+```html
+<button type="button" data-action="start">Start</button> <button type="button" data-action="stop">Stop</button>
+```
 
-1. Копируем этот репозиторий себе.
-2. Открываем в VSCode и запускаем в консоли команду `npm ci` чтобы установить загрузчики и плагины из перечня
-   "package-lock.json".
-3. Меняем под себя значения ключей в файле "package.json":
-   1. `"name": "webpack-5.5-lite"` на `"name": "имя_вашего_проекта"` или просто `"name": ""`;
-   2. В параметрах "repository" - `"url": "git+https://github.com/Eduard-Konovka/webpack-5.5-lite.git"` на
-      `"url": "git+https://github.com/ваше_имя_на_ГитХабе/имя_вашего_проекта.git"`;
-   3. В параметрах "bugs" - `"url": "https://github.com/Eduard-Konovka/webpack-5.5-lite.git/issues"` на
-      `"url": "https://github.com/ваше_имя_на_ГитХабе/имя_вашего_проекта.git/issues"`;
-   4. `"author": "Eduard Konovka <ed098ua@gmail.com>"` на `"author": "Ваше_имя <ваш_e-mail>"` или просто `"author": ""`;
-   5. `"homepage": "https://Eduard-Konovka.github.io/webpack-5.5-lite"` на
-      `"homepage": "https://ваше_имя_на_ГитХабе.github.io/имя_вашего_проекта"`.
+```js
+const colors = ['#FFFFFF', '#2196F3', '#4CAF50', '#FF9800', '#009688', '#795548']
+```
 
-## Команды скриптов в консоли bash:
+Напиши скрипт, который после нажатия кнопки `Start`, раз в секунду меняет цвет фона `body` на случайное значение из
+массива используя инлайн-стиль. При нажатии на кнопку `Stop`, изменение цвета фона должно останавливаться.
 
-1. `npm start` - для запуска разработки и автоматического запуска DevServer.
-2. `npm run dev` - для запуска разработки и создания в папке build файлов разработки (index.html, main.css, main.js,
-   изображения и др.).
-3. `npm run prod` - для запуска продакшена и создания в папке build минифицированных файлов продакшена (index.html,
-   main.css, main.js, изображения и др.).
-4. `npm run deploy` - для деплоя файлов разработки на ГитХаб.
+> ⚠️ Учти, на кнопку `Start` можно нажать бесконечное количество раз. Сделай так, чтобы пока изменение темы запушено,
+> кнопка `Start` была не активна.
+
+Для генерации случайного числа (индекс элемента массива цветов), используй функцию `randomIntegerFromInterval`.
+
+```js
+const randomIntegerFromInterval = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+```

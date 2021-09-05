@@ -1,5 +1,5 @@
 {
-  "name": "webpack-5.5-lite",
+  "name": "goit-js-hw-11-color-switch",
   "version": "1.0.0",
   "description": "Сборка Webpack 5.5",
   "main": "index.js",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eduard-Konovka/webpack-5.5-lite.git"
+    "url": "git+https://github.com/Eduard-Konovka/goit-js-hw-11-color-switch.git"
   },
   "keywords": [],
   "author": "Eduard Konovka <ed098ua@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Eduard-Konovka/webpack-5.5-lite/issues"
+    "url": "https://github.com/Eduard-Konovka/goit-js-hw-11-color-switch/issues"
   },
-  "homepage": "https://Eduard-Konovka.github.io/webpack-5.5-lite",
+  "homepage": "https://Eduard-Konovka.github.io/goit-js-hw-11-color-switch",
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
