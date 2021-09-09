@@ -12,7 +12,6 @@ body {
   font-family: 'DM Sans', sans-serif;
   display: flex;
   justify-content: center;
-  // background-image: url(../images/new-year.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -35,4 +34,8 @@ button {
 .stop {
   color: #740000;
   background-color: #ce1919;
+}
+
+[disabled] {
+  opacity: 0.5;
 }

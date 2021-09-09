@@ -14,6 +14,7 @@ export function startСhangeСolor() {
   }
 
   isActive = true
+  refs.startBtn.setAttribute('disabled', 'disabled')
 
   intervalId = setInterval(() => {
     refs.body.style.backgroundColor = `${colors[randomIntegerFromInterval(0, colors.length - 1)]}`
@@ -24,4 +25,5 @@ export function stopСhangeСolor() {
   clearInterval(intervalId)
 
   isActive = false
+  refs.startBtn.removeAttribute('disabled')
 }
